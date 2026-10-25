@@ -1,5 +1,233 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Chika's Cozy Corner ♡</title><style>
-:root{--ink:#7055a5;--line:#d6b9f5;--paper:#fffafef0;--pink:#ffe0f0;--lav:#e9e1ff;--blue:#e3efff;--yellow:#fff0c8;--shadow:#a37db52b}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);font:16px 'Trebuchet MS',Verdana,sans-serif;background:linear-gradient(145deg,#f8d8eb,#d6d6ff 48%,#fce3e9 80%,#d8e9ff);min-height:100vh}button,input,textarea{font:inherit}button{cursor:pointer;color:var(--ink)}button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid #b486f4;outline-offset:2px}.sky{position:relative;text-align:center;overflow:hidden;padding:44px 12px 28px;background:radial-gradient(circle at 16% 30%,#fff5bd 0 2%,transparent 2.2%),radial-gradient(circle at 80% 25%,#fff5f9 0 5%,transparent 5.2%),linear-gradient(120deg,#c6b7f9,#f8cce8 55%,#b9d6ff);border-bottom:5px solid #fff8}.sky:before,.sky:after{content:'☁️ ☁️ ☁️';position:absolute;font-size:65px;opacity:.5;letter-spacing:40px;bottom:-26px;left:-20px}.sky:after{left:auto;right:-70px;bottom:12px;font-size:40px}.sky h1{position:relative;font-size:clamp(2.1rem,5vw,4.2rem);margin:5px 0;text-shadow:3px 4px #fff9;letter-spacing:2px}.sky p{margin:8px}.mascot{font-size:55px;display:inline-block;animation:bob 3s ease-in-out infinite}.star{position:absolute;animation:twinkle 2s infinite alternate;font-size:24px}.shell{max-width:1260px;margin:0 auto;padding:12px 18px 40px}.nav{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;background:#fff9;border:2px solid #fff;border-radius:40px;padding:10px;margin:-2px auto 18px;position:relative;box-shadow:0 8px 20px var(--shadow)}button{border:2px solid var(--line);border-radius:20px;background:#fffaff;padding:9px 14px;box-shadow:0 3px 0 #e4ceef;transition:transform .15s,background .15s}button:hover{transform:translateY(-2px);background:#ffe6f6}.nav button.active{background:#ffddf1}.layout{display:grid;grid-template-columns:185px minmax(0,1fr) 255px;gap:14px;align-items:start}.stack,.center{display:grid;gap:14px}.card{background:var(--paper);border:2px solid var(--line);border-radius:15px;box-shadow:0 7px 0 #d3b9ed50,0 12px 22px var(--shadow);padding:16px;min-width:0}.card h2,.card h3{margin:0 0 12px;font-size:1.16rem}.pink{background:linear-gradient(135deg,#ffe1ef,#fff2f8)}.lav{background:linear-gradient(135deg,#e8e1ff,#f9eeff)}.blue{background:linear-gradient(135deg,#e2eaff,#f9f6ff)}.yellow{background:linear-gradient(135deg,#fff0cb,#fff9e8)}.welcome{min-height:210px;padding:23px}.welcome p{line-height:1.7}.mini{font-size:12px;opacity:.85}.quote{text-align:center;line-height:1.8}.bigcat{text-align:center;font-size:68px;animation:bob 4s infinite}.sidequote{text-align:center;font-size:21px;line-height:1.5;padding:20px 5px}.chips{display:flex;flex-wrap:wrap;gap:7px}.chip{background:#fff9;border:1px solid var(--line);padding:7px 10px;border-radius:15px;font-size:13px}.row{display:flex;gap:9px;align-items:center}.row>*{min-width:0}.row input[type=text]{flex:1}.field,textarea{border:2px solid #dbc2f2;border-radius:12px;background:#fffcff;padding:11px;width:100%;color:var(--ink)}textarea{resize:vertical;min-height:95px}.notegrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.note{min-height:125px;padding:13px;border:1px solid #e9b9dc;border-radius:9px;box-shadow:0 4px 7px #ac91a120;overflow-wrap:anywhere;white-space:pre-wrap}.note:nth-child(3n+1){background:#ffe1ed;transform:rotate(-1deg)}.note:nth-child(3n+2){background:#e2eaff;transform:rotate(1deg)}.note:nth-child(3n){background:#fff0c9;transform:rotate(-.5deg)}.note small{display:block;margin-top:13px}.note-actions{display:flex;gap:5px;margin-top:9px}.note-actions button,.tiny{padding:5px 9px;font-size:12px}.task{display:flex;align-items:center;gap:8px;padding:7px 0;border-bottom:1px dashed #d9c5ed}.task span{flex:1;overflow-wrap:anywhere}.task.done span{text-decoration:line-through;opacity:.6}.task input{accent-color:#bd87df;width:17px;height:17px}.task button{padding:2px 7px}.progress{height:9px;border-radius:15px;background:#e4d4fa;overflow:hidden;margin:12px 0}.progress div{height:100%;background:#c697e9;transition:width .2s}.panel{display:none}.panel.active{display:grid;gap:14px}.music-cover{font-size:66px;text-align:center;background:linear-gradient(145deg,#d7c9ff,#ffdcf0);border-radius:14px;padding:12px}.music-controls{display:flex;gap:8px;justify-content:center;margin:12px 0}.music-controls button{font-size:22px}.music-controls button:disabled{opacity:.5;cursor:not-allowed}.music-controls button:disabled:hover{transform:none}.volume{width:100%;accent-color:#b98ce9}audio{width:100%;max-width:100%}.status{font-size:12px;min-height:18px}.gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.art{text-align:center;border:2px solid #fff;border-radius:18px;background:linear-gradient(130deg,#ffe2ef,#e2dfff);padding:22px 8px;font-size:56px;animation:bob 4s infinite}.art:nth-child(even){animation-delay:-2s;background:linear-gradient(130deg,#d9efff,#fff1cf)}.art p{font-size:14px;margin:8px}.clock{text-align:center;font-size:28px}.clouds{font-size:58px;text-align:center;animation:bob 3s infinite}footer{text-align:center;margin:30px 0 0}.floaties{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:4}.floaties span{position:absolute;bottom:-50px;animation:rise linear infinite;opacity:.5}body.night{background:linear-gradient(140deg,#343052,#62558b,#403958)}body.night .sky{background:linear-gradient(120deg,#524a87,#957bb7)}body.night .card{--paper:#f0eaff}body.night .nav{background:#eee3f9}body.night .pink{background:#f4dce9}body.night .lav{background:#ded5f4}body.night .blue{background:#d9dff5}body.night .yellow{background:#eee3ca}@keyframes bob{50%{transform:translateY(-9px) rotate(2deg)}}@keyframes rise{to{transform:translateY(-115vh) rotate(90deg)}}@keyframes twinkle{to{opacity:.2;transform:scale(.7)}}@media(max-width:950px){.layout{grid-template-columns:minmax(0,1fr) 240px}.left{display:none}}@media(max-width:680px){.layout{grid-template-columns:1fr}.right{grid-row:2}.notegrid{grid-template-columns:repeat(2,minmax(0,1fr))}.sky{padding-top:26px}.shell{padding:10px}}@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;scroll-behavior:auto!important}}
-</style></head><body><div class="floaties" aria-hidden="true" id="floaties"></div><header class="sky"><span class="star" style="left:12%;top:20%">⭐</span><span class="star" style="right:16%;top:40%">✦</span><div class="mascot">☁️ 🐱 🌙</div><h1>Chika's Cozy Corner ♡</h1><p>small dreams ✧ big adventures ✧ soft days</p><span class="mini">🐾 a tiny home among the clouds 🐾</span></header><div class="shell"><nav class="nav" aria-label="Main sections"><button class="active" data-tab="home">⌂ Home</button><button data-tab="notes">♡ My Notes</button><button data-tab="diary">📔 Diary</button><button data-tab="gallery">🐰 Gallery</button><button data-tab="about">✧ About</button><button id="theme">🌙 Night mode</button></nav><div class="layout"><aside class="stack left"><div class="card pink sidequote">Good things<br>take time ♡<div class="bigcat">🐈</div></div><div class="card"><h3>☁️ Little favorites</h3><div class="chips"><span class="chip">🎮 Minecraft</span><span class="chip">🏙️ Cities: Skylines</span><span class="chip">🎧 Music</span><span class="chip">🐰 Animals</span><span class="chip">🌸 Dreams</span></div></div><div class="card lav quote">You are allowed to grow at your own pace ✨</div></aside><main class="center"><section id="home" class="panel active"><div class="card welcome"><h2>Welcome to my little space! ✧</h2><p>Hi, friend! ♡<br>Here you'll find cozy thoughts, games, cute notes and tiny moments of joy. Make yourself comfy!</p><div class="bigcat">🐱 ☁️ 🐥</div></div><div class="card lav quote">✦ Better days are coming ✦<br>🌷 ☁️ ⭐</div><div class="card"><h2>⭐ My interests</h2><div class="chips"><span class="chip">🟩 Minecraft survival</span><span class="chip">🏙️ City building</span><span class="chip">🎮 Games</span><span class="chip">🎧 Lofi</span><span class="chip">🐇 Cute things</span></div></div><div class="card"><div class="row" style="justify-content:space-between"><h2>💌 Latest notes</h2><button class="tiny" data-go="notes">View all →</button></div><div id="latest" class="notegrid"></div></div></section><section id="notes" class="panel"><div class="card pink"><h2>💌 My sticky notes</h2><p>Write a tiny thought, reminder or happy memory!</p><textarea id="noteText" maxlength="1200" placeholder="Today I want to remember..."></textarea><div class="row"><button id="saveNote">♡ Save note</button><button id="cancelEdit" hidden>Cancel edit</button></div><p class="mini" id="noteMessage" role="status"></p></div><div class="card"><h2>🌷 My note board</h2><div id="allNotes" class="notegrid"></div></div></section><section id="diary" class="panel"><div class="card pink"><h2>📔 Little diary</h2><p>What was your day like? Pick a mood and write a few words.</p><div class="row"><input class="field" type="date" id="diaryDate" aria-label="Diary date"><select class="field" id="mood" aria-label="Mood"><option>🌸 Happy</option><option>☁️ Calm</option><option>🐱 Cozy</option><option>🌧️ Rainy</option><option>⭐ Excited</option></select></div><textarea id="diaryText" maxlength="5000" placeholder="Dear diary..."></textarea><button id="saveDiary">Save diary page ♡</button><p class="mini" id="diaryMessage" role="status"></p></div><div class="card"><h2>📖 Past pages</h2><div id="diaryEntries"></div></div></section><section id="gallery" class="panel"><div class="card"><h2>🐾 Tiny animal gallery</h2><p>Some little friends to keep you company ♡</p><div class="gallery"><div class="art">🐰<p>Cloud bunny</p></div><div class="art">🐱<p>Sleepy kitten</p></div><div class="art">🐻<p>Honey bear</p></div><div class="art">🐥<p>Little chick</p></div><div class="art">🦊<p>Star fox</p></div><div class="art">🐸<p>Frog friend</p></div></div></div></section><section id="about" class="panel"><div class="card lav"><h2>♡ About this little corner</h2><p>A dreamy pastel space for journaling, games, music and happy little things.</p><div class="clouds">☁️ 🐰 ☁️</div><p>Everything you write stays in this browser on this device. Don't put secrets here on a shared computer, and keep a backup if your notes matter to you.</p><button id="export">⬇ Back up my notes and diary</button><p class="mini" id="exportMsg" role="status"></p></div></section></main><aside class="stack right"><div class="card lav"><h2>🎵 Now playing</h2><div class="music-cover">🌙 🎧 ☁️</div><p id="track">Choose a cozy audio file ♡</p><input type="file" id="musicFile" accept="audio/*" style="max-width:100%;font-size:12px"><audio id="audio" loop></audio><div class="music-controls"><button id="back" title="Restart track" disabled>↶</button><button id="play" title="Play or pause" disabled>▶</button><button id="mute" title="Mute" disabled>♫</button></div><input class="volume" id="volume" type="range" min="0" max="1" step=".05" value=".6" aria-label="Music volume"><p class="mini status" id="musicStatus">Music only plays after you choose a file and press play.</p></div><div class="card pink"><h2>🐰 Today's little goals</h2><div id="tasks"></div><div class="progress"><div id="progress"></div></div><div class="row"><input id="taskInput" class="field" type="text" maxlength="100" placeholder="A tiny goal..."><button id="addTask">+</button></div><p class="mini" id="taskCount"></p></div><div class="card blue"><div class="clouds">☁️</div><div class="clock" id="clock">--:--</div><p class="quote">Take your time.<br>You're doing great! ♡</p></div></aside></div><footer>☁️ Made with lots of love ♡ 🐾</footer></div><script>
-'use strict';const $=id=>document.getElementById(id),get=(k,d)=>{try{return JSON.parse(localStorage.getItem('cozy2-'+k))??d}catch{return d}},put=(k,v)=>{try{localStorage.setItem('cozy2-'+k,JSON.stringify(v));return true}catch{alert('Browser storage is unavailable or full. Please back up your writing.');return false}};let notes=get('notes',[]),tasks=get('tasks',[{text:'Finish my website',done:false},{text:'Play some Minecraft',done:false},{text:'Have a cozy day ♡',done:false}]),diary=get('diary',{}),editing=null;const dateNow=()=>{let d=new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')};function tab(id){document.querySelectorAll('.panel').forEach(x=>x.classList.toggle('active',x.id===id));document.querySelectorAll('[data-tab]').forEach(x=>x.classList.toggle('active',x.dataset.tab===id));window.scrollTo({top:0,behavior:'smooth'})}document.querySelectorAll('[data-tab]').forEach(b=>b.onclick=()=>tab(b.dataset.tab));document.querySelectorAll('[data-go]').forEach(b=>b.onclick=()=>tab(b.dataset.go));function makeButton(text,fn){let b=document.createElement('button');b.textContent=text;b.onclick=fn;return b}function makeNote(n,i){let el=document.createElement('div');el.className='note';let body=document.createElement('div');body.textContent=n.text;let date=document.createElement('small');date.textContent=n.date||'';let actions=document.createElement('div');actions.className='note-actions';actions.append(makeButton('✎ Edit',()=>{editing=i;$('noteText').value=n.text;$('saveNote').textContent='♡ Update note';$('cancelEdit').hidden=false;tab('notes');$('noteText').focus()}),makeButton('× Delete',()=>{if(confirm('Delete this note?')){notes.splice(i,1);put('notes',notes);renderNotes()}}));el.append(body,date,actions);return el}function renderNotes(){for(let id of ['allNotes','latest'])$(id).replaceChildren();if(!notes.length){$('allNotes').textContent='Your note board is waiting for its first note ♡';$('latest').textContent='Your newest notes will appear here ♡'}notes.forEach((n,i)=>{$('allNotes').append(makeNote(n,i));if(i<3)$('latest').append(makeNote(n,i))})}function resetEdit(){editing=null;$('noteText').value='';$('saveNote').textContent='♡ Save note';$('cancelEdit').hidden=true}$('saveNote').onclick=()=>{let text=$('noteText').value.trim();if(!text){$('noteMessage').textContent='Write something first ♡';return}if(editing===null)notes.unshift({text,date:dateNow()});else notes[editing].text=text;if(put('notes',notes)){$('noteMessage').textContent='Saved! ♡';resetEdit();renderNotes()}};$('cancelEdit').onclick=resetEdit;function renderTasks(){$('tasks').replaceChildren();tasks.forEach((t,i)=>{let row=document.createElement('div');row.className='task'+(t.done?' done':'');let c=document.createElement('input');c.type='checkbox';c.checked=t.done;c.setAttribute('aria-label','Complete '+t.text);c.onchange=()=>{t.done=c.checked;put('tasks',tasks);renderTasks()};let s=document.createElement('span');s.textContent=t.text;row.append(c,s,makeButton('×',()=>{tasks.splice(i,1);put('tasks',tasks);renderTasks()}));$('tasks').append(row)});let done=tasks.filter(t=>t.done).length;$('progress').style.width=(tasks.length?done/tasks.length*100:0)+'%';$('taskCount').textContent=done+' of '+tasks.length+' complete ♡'}function addTask(){let t=$('taskInput').value.trim();if(!t)return;tasks.push({text:t,done:false});$('taskInput').value='';put('tasks',tasks);renderTasks()}$('addTask').onclick=addTask;$('taskInput').onkeydown=e=>{if(e.key==='Enter')addTask()};$('diaryDate').value=dateNow();function loadDay(){let e=diary[$('diaryDate').value];$('diaryText').value=e?.text||'';$('mood').value=e?.mood||'🌸 Happy';$('diaryMessage').textContent=''}$('diaryDate').onchange=loadDay;$('saveDiary').onclick=()=>{let date=$('diaryDate').value,text=$('diaryText').value.trim();if(!date||!text){$('diaryMessage').textContent='Choose a date and write a little something ♡';return}diary[date]={text,mood:$('mood').value};if(put('diary',diary)){$('diaryMessage').textContent='Diary page saved! ♡';renderDiary()}};function renderDiary(){$('diaryEntries').replaceChildren();let dates=Object.keys(diary).sort().reverse();if(!dates.length)$('diaryEntries').textContent='No diary pages yet ♡';dates.forEach(date=>{let el=document.createElement('div');el.className='note';el.style.marginBottom='12px';let title=document.createElement('strong');title.textContent=date+' · '+diary[date].mood;let body=document.createElement('p');body.textContent=diary[date].text;let actions=document.createElement('div');actions.className='note-actions';actions.append(makeButton('✎ Open',()=>{$('diaryDate').value=date;loadDay();tab('diary');$('diaryText').focus()}),makeButton('× Delete',()=>{if(confirm('Delete this diary page?')){delete diary[date];put('diary',diary);renderDiary();loadDay()}}));el.append(title,body,actions);$('diaryEntries').append(el)})}let audioURL;const audio=$('audio');audio.volume=.6;$('musicFile').onchange=e=>{let file=e.target.files?.[0];if(!file)return;audio.pause();if(audioURL)URL.revokeObjectURL(audioURL);audioURL=URL.createObjectURL(file);audio.src=audioURL;$('track').textContent=file.name;$('play').disabled=$('back').disabled=$('mute').disabled=false;$('play').textContent='▶';$('musicStatus').textContent='Ready to play ♡'};$('play').onclick=async()=>{if(audio.paused){try{await audio.play()}catch{$('musicStatus').textContent='Could not play this file; try another audio format.'}}else audio.pause()};audio.onplay=()=>{$('play').textContent='Ⅱ';$('musicStatus').textContent='Playing your cozy music ♫'};audio.onpause=()=>{$('play').textContent='▶';$('musicStatus').textContent='Paused ♡'};$('back').onclick=()=>{audio.currentTime=0};$('mute').onclick=()=>{audio.muted=!audio.muted;$('mute').textContent=audio.muted?'♩':'♫'};$('volume').oninput=e=>{audio.volume=Number(e.target.value)};$('theme').onclick=()=>{let on=document.body.classList.toggle('night');$('theme').textContent=on?'☀️ Day mode':'🌙 Night mode';put('night',on)};if(get('night',false)){document.body.classList.add('night');$('theme').textContent='☀️ Day mode'}$('export').onclick=()=>{let blob=new Blob([JSON.stringify({notes,tasks,diary},null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='my-cozy-corner-backup.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);$('exportMsg').textContent='Backup downloaded ♡ Keep it somewhere safe.'};function clock(){$('clock').textContent=new Date().toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'})}clock();setInterval(clock,30000);for(let i=0;i<16;i++){let b=document.createElement('span');b.textContent=['♡','✧','○','☁','✦'][i%5];b.style.left=(i*31.7%100)+'%';b.style.animationDelay=-(i*1.7)+'s';b.style.animationDuration=(13+i%6*2)+'s';b.style.fontSize=(14+i%4*5)+'px';$('floaties').append(b)}renderNotes();renderTasks();renderDiary();loadDay();
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Chika’s Cozy Corner</title>
+<link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:linear-gradient(180deg,#cdc2f6 0%,#f2cdea 50%,#ffe4ec 100%);--card:rgba(255,255,255,.82);--ink:#4b3a73;--soft:#8a76b5;--acc:#a85fd1;--line:#dccff7;--pink:#ffd5e6;--blue:#d6e5ff;--yellow:#fff0b3;--chip:#fff;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:linear-gradient(180deg,#1a1432 0%,#2a1c4a 55%,#3a2350 100%);--card:rgba(40,30,72,.85);--ink:#efe6ff;--soft:#b9a6e6;--acc:#d9a6ff;--line:#4d3d82;--pink:#5a2f56;--blue:#2c3f70;--yellow:#5c5130;--chip:#352a5e;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:linear-gradient(180deg,#1a1432 0%,#2a1c4a 55%,#3a2350 100%);--card:rgba(40,30,72,.85);--ink:#efe6ff;--soft:#b9a6e6;--acc:#d9a6ff;--line:#4d3d82;--pink:#5a2f56;--blue:#2c3f70;--yellow:#5c5130;--chip:#352a5e;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;background:var(--bg) fixed;color:var(--ink);font:20px/1.35 Gaegu,"Comic Sans MS",ui-rounded,sans-serif}
+button,input,select,textarea{font:inherit;color:inherit}
+button{cursor:pointer}
+button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+.wrap{max-width:1200px;margin:0 auto;padding:12px}
+.hero{text-align:center;padding:24px 8px 4px}
+h1{font-size:clamp(34px,6vw,58px);margin:0;color:var(--acc);line-height:1}
+.hero p{margin:6px 0;color:var(--soft);font-size:22px}
+.cat{font-size:44px;display:inline-block}
+@media(prefers-reduced-motion:no-preference){.cat{animation:fl 4s ease-in-out infinite}}
+@keyframes fl{50%{transform:translateY(-6px)}}
+nav{display:flex;gap:4px;flex-wrap:wrap;justify-content:center;background:var(--card);border-radius:32px;padding:6px;margin:10px auto 14px;width:fit-content;max-width:100%}
+.navb{border:0;background:none;border-radius:24px;padding:6px 14px}
+.navb.on{background:var(--pink);font-weight:700}
+.grid{display:grid;grid-template-columns:170px 1fr 290px;gap:14px;align-items:start}
+.mid{display:grid;grid-template-columns:1.4fr 1fr;gap:14px}
+.span{grid-column:1/-1}
+.side,.right{display:flex;flex-direction:column;gap:14px}
+.side .lead{text-align:center;font-size:30px;line-height:1.1;color:var(--acc)}
+.card{background:var(--card);border:2px solid var(--line);border-radius:20px;padding:14px 16px;backdrop-filter:blur(6px)}
+.card h3{margin:0 0 8px;font-size:23px;display:flex;justify-content:space-between;align-items:center}
+.card.pink,.note.pink,.tile.t0{background:var(--pink)}
+.card.blue,.note.blue,.tile.t1{background:var(--blue)}
+.note.yellow,.tile.t2{background:var(--yellow)}
+.soft{color:var(--soft)}
+.btn,.chip,.sb{border:2px solid var(--line);background:var(--chip);border-radius:16px;padding:4px 12px}
+.btn{background:var(--acc);color:#fff;border-color:transparent;font-weight:700}
+.sb{width:100%;text-align:left}
+.chips{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0}
+.chip.on{background:var(--acc);color:#fff}
+.chk{display:flex;justify-content:space-between;align-items:center;gap:6px;padding:2px 0}
+.chk input{accent-color:var(--acc);width:18px;height:18px;margin-right:8px}
+.done{text-decoration:line-through;opacity:.6}
+.x{border:0;background:none;color:var(--soft);font-size:22px}
+.row{display:flex;gap:6px;margin-bottom:6px}
+input[type=text],input[type=email],textarea,select{background:var(--chip);border:2px solid var(--line);border-radius:12px;padding:6px 10px;width:100%}
+.row input{flex:1;min-width:0}
+.cover{font-size:34px;background:var(--blue);border-radius:12px;width:62px;height:62px;display:grid;place-items:center;flex:none}
+.bar{height:6px;background:var(--line);border-radius:6px;margin:10px 0 2px}
+.bar i{display:block;height:100%;background:var(--acc);border-radius:6px}
+.ctl{display:flex;justify-content:center;align-items:center;gap:14px}
+.ctl button{border:0;background:none;font-size:24px}
+.ctl .big{background:var(--acc);color:#fff;border-radius:50%;width:54px;height:54px;font-size:22px}
+.clock{display:flex;gap:14px;align-items:center}
+.time{font-size:34px}
+.big-emoji{font-size:44px}
+.ints{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:8px;text-align:center}
+.int{border:0;background:none;padding:6px;border-radius:14px}
+.int:hover{background:var(--blue)}
+.int span{display:block;font-size:40px}
+.quote{display:grid;place-items:center;text-align:center;font-size:26px;background:var(--pink);border:2px solid var(--line);border-radius:20px;padding:14px;color:var(--ink)}
+.banner{display:grid;place-items:center;font-size:64px;background:var(--blue);border:2px solid var(--line);border-radius:20px;min-height:150px}
+.notes,.gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px}
+.note{border-radius:14px;padding:12px;min-height:110px;display:flex;flex-direction:column;justify-content:space-between;color:#4b3a73;position:relative}
+:root[data-theme="dark"] .note{color:#f3ebff}
+.note small{opacity:.7}
+.note .x{position:absolute;top:2px;right:6px}
+.nform{display:grid;grid-template-columns:1fr auto auto auto;gap:8px;align-items:start}
+.nform textarea{min-height:48px;resize:vertical}
+.nform select{width:auto}
+.tile{border:2px solid var(--line);border-radius:16px;min-height:120px;display:grid;place-items:center;align-content:center;color:var(--ink)}
+.tile span{font-size:46px}
+.tile.big{width:min(340px,86vw);min-height:260px;font-size:26px}
+.modal{position:fixed;inset:0;background:rgba(20,10,40,.55);display:grid;place-items:center;z-index:5}
+.col{display:grid;gap:10px;max-width:480px}
+.err{color:#d6457f;margin:0}
+footer{text-align:center;color:var(--soft);padding:18px}
+@media(max-width:940px){.grid,.mid,.nform{grid-template-columns:1fr}.side{flex-direction:row;flex-wrap:wrap}.side .sb{width:auto}.side .lead{width:100%}}
+</style></head>
+<body><div id="root"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.3.1/umd/react.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.3.1/umd/react-dom.production.min.js"></script>
+<script>
+/* ---------- infrastructure: storage, hooks, router state, store ---------- */
+const {useState,useEffect,useRef,createContext,useContext}=React, h=React.createElement;
+const ls={get(k,d){try{const v=localStorage.getItem("chika:"+k);return v?JSON.parse(v):d}catch(e){return d}},set(k,v){try{localStorage.setItem("chika:"+k,JSON.stringify(v))}catch(e){}}};
+function usePersist(k,d){const[s,set]=useState(()=>ls.get(k,d));useEffect(()=>ls.set(k,s),[k,s]);return[s,set]}
+const Ctx=createContext(),useCtx=()=>useContext(Ctx);
+const today=()=>new Date().toISOString().slice(0,10);
+const fmt=d=>new Date(d+"T12:00:00").toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric"});
+const mmss=s=>Math.floor(s/60)+":"+String(s%60).padStart(2,"0");
+
+/* ---------- data ---------- */
+const PAGES=[["home","🏠","Home"],["about","💜","About Me"],["notes","📓","My Notes"],["games","🎮","Games"],["gallery","🖼️","Gallery"],["contact","✉️","Contact"]];
+const TAGS=["Minecraft","Cities: Skylines","Music","My Life","Dreams"], TAGI=["🟩","🏙️","🎵","⭐","☁️"];
+const seedNotes=[{id:1,t:"You can do it! 💜",c:"pink",tag:"My Life",d:"2026-10-21"},{id:2,t:"Small steps, big dreams",c:"blue",tag:"Dreams",d:"2026-10-20"},{id:3,t:"Remember: you are enough",c:"yellow",tag:"My Life",d:"2026-10-19"}];
+const seedTodos=[{id:1,t:"Finish my website",x:1},{id:2,t:"Play Minecraft",x:1},{id:3,t:"Learn how to build better"},{id:4,t:"Watch a tutorial"},{id:5,t:"Explore Cities: Skylines"},{id:6,t:"Be happy!"}];
+const DAY=["Be kind to myself","Play some Minecraft","Watch a YouTube tutorial","Drink water","Have a good day!"];
+const QUOTES=["“Better days are coming”","“Small steps, big dreams”","“Good things take time”","“You are enough”"];
+const TRACKS=[{n:"lofi hip hop radio",s:"beats to relax/study to",ch:[[57,60,64],[53,57,60],[48,52,55],[55,59,62]]},{n:"rainy window",s:"soft piano drift",ch:[[50,53,57],[58,62,65],[53,57,60],[48,52,57]]},{n:"midnight clouds",s:"sleepy pads",ch:[[52,55,59],[57,60,64],[50,53,57],[55,59,62]]}];
+
+/* ---------- Web Audio lofi player ---------- */
+function usePlayer(){
+  const[i,setI]=useState(0),[on,setOn]=useState(false),[p,setP]=useState(0),a=useRef(null);
+  useEffect(()=>{
+    if(!on)return;
+    try{a.current=a.current||new(window.AudioContext||window.webkitAudioContext)();a.current.resume()}catch(e){return}
+    const ctx=a.current;let step=0;
+    const chord=()=>TRACKS[i].ch[step++%4].forEach(m=>{const o=ctx.createOscillator(),g=ctx.createGain(),t=ctx.currentTime;o.type="triangle";o.frequency.value=440*Math.pow(2,(m-69)/12);g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(.05,t+.6);g.gain.linearRampToValueAtTime(0,t+3.4);o.connect(g);g.connect(ctx.destination);o.start(t);o.stop(t+3.5)});
+    chord();const c=setInterval(chord,3000),q=setInterval(()=>setP(x=>(x+1)%180),1000);
+    return()=>{clearInterval(c);clearInterval(q)}
+  },[on,i]);
+  return{i,on,p,toggle:()=>setOn(!on),next:()=>{setI((i+1)%3);setP(0)},prev:()=>{setI((i+2)%3);setP(0)}};
+}
+
+/* ---------- shared UI ---------- */
+const Card=({cls="",title,right,children})=>h("section",{className:"card "+cls},title&&h("h3",null,title,right),children);
+
+/* ---------- widgets ---------- */
+function Today(){
+  const[done,setD]=usePersist("today:"+today(),[]);
+  return h(Card,{cls:"pink",title:"🐰 Today"},DAY.map(t=>h("label",{key:t,className:"chk"},h("span",null,h("input",{type:"checkbox",checked:done.includes(t),onChange:()=>setD(done.includes(t)?done.filter(x=>x!==t):[...done,t])}),t))));
+}
+function Todos(){
+  const{todos,setTodos}=useCtx(),[t,setT]=useState("");
+  const add=e=>{e.preventDefault();if(!t.trim())return;setTodos([...todos,{id:Date.now(),t:t.trim()}]);setT("")};
+  return h(Card,{title:"🐰 To-Do List"},
+    h("form",{onSubmit:add,className:"row"},h("input",{type:"text",value:t,onChange:e=>setT(e.target.value),placeholder:"Add a task…","aria-label":"New task"}),h("button",{className:"btn","aria-label":"Add task"},"+")),
+    todos.map(x=>h("div",{key:x.id,className:"chk"},
+      h("label",null,h("input",{type:"checkbox",checked:!!x.x,onChange:()=>setTodos(todos.map(y=>y.id==x.id?{...y,x:y.x?0:1}:y))}),h("span",{className:x.x?"done":""},x.t)),
+      h("button",{className:"x","aria-label":"Delete task",onClick:()=>setTodos(todos.filter(y=>y.id!=x.id))},"×"))));
+}
+function Player(){
+  const{player:p}=useCtx(),T=TRACKS[p.i];
+  return h(Card,{title:"Now Playing ♪"},
+    h("div",{className:"row"},h("div",{className:"cover"},"🌆"),h("div",null,h("b",null,T.n),h("div",{className:"soft"},"– "+T.s))),
+    h("div",{className:"bar"},h("i",{style:{width:p.p/1.8+"%"}})),
+    h("div",{className:"soft"},mmss(p.p)+" / 3:00"),
+    h("div",{className:"ctl"},h("button",{onClick:p.prev,"aria-label":"Previous track"},"⏮"),h("button",{className:"big",onClick:p.toggle,"aria-label":p.on?"Pause":"Play"},p.on?"⏸":"▶"),h("button",{onClick:p.next,"aria-label":"Next track"},"⏭")));
+}
+function ClockCard(){
+  const[n,s]=useState(new Date());
+  useEffect(()=>{const i=setInterval(()=>s(new Date()),1000);return()=>clearInterval(i)},[]);
+  const t=n.toLocaleTimeString("en-GB",{hour:"2-digit",minute:"2-digit",timeZone:"Europe/Madrid"}),hr=+t.slice(0,2);
+  return h(Card,null,h("div",{className:"clock"},h("span",{className:"big-emoji"},hr>=7&&hr<20?"☀️":"🌙"),h("div",null,h("b",{className:"time"},t),h("div",{className:"soft"},"Spain"))),h("p",null,"🌱 Take your time",h("br"),"You’re doing great! 💜"));
+}
+function NoteCard({n}){
+  const{notes,setNotes}=useCtx();
+  return h("div",{className:"note "+n.c},h("div",null,n.t),h("small",null,n.tag+" · "+fmt(n.d)),h("button",{className:"x","aria-label":"Delete note",onClick:()=>setNotes(notes.filter(x=>x.id!=n.id))},"×"));
+}
+
+/* ---------- pages ---------- */
+function Home(){
+  const{notes,go,setTag}=useCtx(),[q,setQ]=useState(0),jump=(r,t)=>{if(t)setTag(t);go(r)};
+  const ints=[["🟩","Minecraft","(Survival)","notes","Minecraft"],["🏙️","Cities: Skylines","(First version)","notes","Cities: Skylines"],["🎮","Games","(also random ones!)","games"],["🎧","Music","(lofi ♡)","notes","Music"],["🐰","Cute things","(animals, art, etc.)","gallery"]];
+  return h("div",{className:"grid"},
+    h("aside",{className:"side"},h("div",{className:"lead"},"Good things take time ♡"),h("div",{className:"lead"},"🐱"),TAGS.map((t,i)=>h("button",{key:t,className:"sb",onClick:()=>jump("notes",t)},TAGI[i]+" "+t))),
+    h("div",{className:"mid"},
+      h(Card,{title:"Welcome to my little space! ✦"},h("p",null,"Hi! I’m Chika! 💜",h("br"),"This is my cozy corner on the internet. Here you can find my thoughts, hobbies, games, cute notes and more!",h("br"),"I’m so happy you’re here! ٩(◕‿◕)۶")),
+      h(Today),
+      h("div",{className:"banner","aria-hidden":"true"},"🐱☁️🐥"),
+      h("button",{className:"quote",onClick:()=>setQ((q+1)%QUOTES.length),"aria-label":"Next quote"},QUOTES[q]),
+      h("div",{className:"span"},h(Card,{title:"⭐ My Interests"},h("div",{className:"ints"},ints.map(x=>h("button",{key:x[1],className:"int",onClick:()=>jump(x[3],x[4])},h("span",null,x[0]),x[1],h("div",{className:"soft"},x[2])))))),
+      h("div",{className:"span"},h(Card,{title:"📓 Latest Notes",right:h("button",{className:"chip",onClick:()=>jump("notes","All")},"View all →")},h("div",{className:"notes"},notes.slice(0,3).map(n=>h(NoteCard,{key:n.id,n}))))) ),
+    h("div",{className:"right"},h(Player),h(Todos),h(ClockCard)));
+}
+function About(){
+  const{notes,todos}=useCtx();
+  return h(Card,{title:"💜 About Me"},h("p",null,"I’m Chika — I love building things in Minecraft, designing cities in Cities: Skylines, listening to lofi, and collecting cute things."),
+    h("p",{className:"soft"},"Right now: "+notes.length+" notes written · "+todos.filter(t=>t.x).length+"/"+todos.length+" to-dos done."));
+}
+function Notes(){
+  const{notes,setNotes,tag,setTag}=useCtx(),[t,setT]=useState(""),[c,setC]=useState("pink"),[g,setG]=useState("My Life");
+  const add=e=>{e.preventDefault();if(!t.trim())return;setNotes([{id:Date.now(),t:t.trim(),c,tag:g,d:today()},...notes]);setT("")};
+  const list=notes.filter(n=>tag=="All"||n.tag==tag);
+  return h(Card,{title:"📓 My Notes"},
+    h("form",{onSubmit:add,className:"nform"},
+      h("textarea",{value:t,maxLength:140,onChange:e=>setT(e.target.value),placeholder:"Write a little note…","aria-label":"Note text"}),
+      h("select",{value:g,onChange:e=>setG(e.target.value),"aria-label":"Tag"},TAGS.map(x=>h("option",{key:x},x))),
+      h("select",{value:c,onChange:e=>setC(e.target.value),"aria-label":"Color"},["pink","blue","yellow"].map(x=>h("option",{key:x},x))),
+      h("button",{className:"btn"},"Add note")),
+    h("div",{className:"chips"},["All",...TAGS].map(x=>h("button",{key:x,className:"chip"+(x==tag?" on":""),onClick:()=>setTag(x)},x))),
+    h("div",{className:"notes"},list.length?list.map(n=>h(NoteCard,{key:n.id,n})):h("p",{className:"soft"},"No notes here yet ✨")));
+}
+function Games(){
+  const E=["🐱","🐰","⭐","🌙","☁️","🍓","🧸","🌸"],mk=()=>[...E,...E].sort(()=>Math.random()-.5);
+  const[c,setC]=useState(mk),[o,setO]=useState([]),[m,setM]=useState([]),[mv,setMv]=useState(0),[best,setBest]=usePersist("best",0),done=m.length==8;
+  useEffect(()=>{if(done&&(!best||mv<best))setBest(mv)},[done]);
+  const flip=k=>{if(o.length>1||o.includes(k)||m.includes(c[k]))return;const n=[...o,k];setO(n);if(n.length==2){setMv(mv+1);if(c[n[0]]==c[k]){setM([...m,c[k]]);setO([])}else setTimeout(()=>setO([]),700)}};
+  const reset=()=>{setC(mk());setO([]);setM([]);setMv(0)};
+  return h(Card,{title:"🎮 Memory Match",right:h("button",{className:"chip",onClick:reset},"New game")},
+    h("p",{className:"soft"},"Moves: "+mv+" · Best: "+(best||"–")+(done?" · You did it! 🎉":"")),
+    h("div",{className:"gal"},c.map((e,k)=>h("button",{key:k,className:"tile t"+(m.includes(e)?1:0),"aria-label":o.includes(k)||m.includes(e)?e:"Hidden card",onClick:()=>flip(k)},h("span",null,o.includes(k)||m.includes(e)?e:"❔")))));
+}
+const ART=[["🐱","Nap time"],["🌙","Moon night"],["🏙️","Skyline"],["🟩","Block build"],["🎧","Lofi"],["🐰","Bunny"],["🌸","Spring"],["☁️","Clouds"]];
+function Gallery(){
+  const[o,setO]=useState(null);
+  useEffect(()=>{const k=e=>e.key=="Escape"&&setO(null);addEventListener("keydown",k);return()=>removeEventListener("keydown",k)},[]);
+  return h(Card,{title:"🖼️ Gallery"},h("div",{className:"gal"},ART.map((a,i)=>h("button",{key:i,className:"tile t"+(i%3),onClick:()=>setO(a)},h("span",null,a[0]),a[1]))),
+    o&&h("div",{className:"modal",onClick:()=>setO(null)},h("div",{className:"tile big t"+(ART.indexOf(o)%3)},h("span",null,o[0]),o[1])));
+}
+function Contact(){
+  const[f,setF]=useState({n:"",e:"",m:""}),[err,setErr]=useState(""),[ok,setOk]=useState(false),[box,setBox]=usePersist("outbox",[]);
+  const u=k=>e=>{setOk(false);setF({...f,[k]:e.target.value})};
+  const sub=e=>{e.preventDefault();if(!f.n.trim()||!/^\S+@\S+\.\S+$/.test(f.e)||f.m.trim().length<5){setErr("Please add your name, a valid email and a short message.");return}setBox([...box,{...f,d:Date.now()}]);setF({n:"",e:"",m:""});setErr("");setOk(true)};
+  return h(Card,{title:"✉️ Contact"},ok&&h("p",null,"Thank you! Your message was saved 💜"),
+    h("form",{onSubmit:sub,className:"col"},
+      h("input",{type:"text",placeholder:"Your name",value:f.n,onChange:u("n"),"aria-label":"Name"}),
+      h("input",{type:"email",placeholder:"Your email",value:f.e,onChange:u("e"),"aria-label":"Email"}),
+      h("textarea",{placeholder:"Say hi…",value:f.m,onChange:u("m"),"aria-label":"Message"}),
+      err&&h("p",{className:"err",role:"alert"},err),h("button",{className:"btn"},"Send ♡")));
+}
+const VIEWS={home:Home,about:About,notes:Notes,games:Games,gallery:Gallery,contact:Contact};
+
+/* ---------- app shell ---------- */
+function App(){
+  const[theme,setTheme]=usePersist("theme",matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");
+  useEffect(()=>{document.documentElement.dataset.theme=theme},[theme]);
+  const[route,setR]=useState(()=>{const x=location.hash.slice(1);return VIEWS[x]?x:"home"});
+  const go=r=>{setR(r);try{history.replaceState(null,"","#"+r)}catch(e){}scrollTo(0,0)};
+  const[notes,setNotes]=usePersist("notes",seedNotes),[todos,setTodos]=usePersist("todos",seedTodos),[tag,setTag]=useState("All"),player=usePlayer();
+  const View=VIEWS[route];
+  return h(Ctx.Provider,{value:{notes,setNotes,todos,setTodos,tag,setTag,go,player}},
+    h("div",{className:"wrap"},
+      h("header",{className:"hero"},h("h1",null,"Chika’s Cozy Corner ",h("span",{className:"cat","aria-hidden":"true"},"🐱")),h("p",null,"small dreams ✧ big adventures")),
+      h("nav",{"aria-label":"Main"},PAGES.map(p=>h("button",{key:p[0],className:"navb"+(route==p[0]?" on":""),"aria-current":route==p[0]?"page":null,onClick:()=>go(p[0])},p[1]+" "+p[2])),
+        h("button",{className:"navb","aria-label":"Toggle light or dark mode",onClick:()=>setTheme(theme=="dark"?"light":"dark")},theme=="dark"?"☀️":"🌙")),
+      h("main",null,h(View)),
+      h("footer",null,"Made with lots of love ♡ 🐾")));
+}
+ReactDOM.createRoot(document.getElementById("root")).render(h(App));
 </script></body></html>

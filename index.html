@@ -2,7 +2,7 @@
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Chika’s Cozy Corner</title>
-<link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&family=Patrick+Hand&family=Quicksand:wght@400;600&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
 <style>
 :root{--bg:linear-gradient(180deg,#cdc2f6 0%,#f2cdea 50%,#ffe4ec 100%);--card:rgba(255,255,255,.82);--ink:#4b3a73;--soft:#8a76b5;--acc:#a85fd1;--line:#dccff7;--pink:#ffd5e6;--blue:#d6e5ff;--yellow:#fff0b3;--chip:#fff;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 @media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:linear-gradient(180deg,#1a1432 0%,#2a1c4a 55%,#3a2350 100%);--card:rgba(40,30,72,.85);--ink:#efe6ff;--soft:#b9a6e6;--acc:#d9a6ff;--line:#4d3d82;--pink:#5a2f56;--blue:#2c3f70;--yellow:#5c5130;--chip:#352a5e;color-scheme:dark}}
@@ -122,6 +122,25 @@ footer{text-align:center;color:var(--soft);padding:18px}
 @keyframes up{from{opacity:0;transform:translateY(14px)}}
 @keyframes wig{25%{transform:rotate(-8deg)}75%{transform:rotate(8deg)}}
 @keyframes rise{from{opacity:1;transform:translateY(0) scale(.6)}to{opacity:0;transform:translateY(-70px) scale(1.2)}}
+body{font-size:calc(20px*var(--k,1));font-family:var(--ff,Gaegu),"Comic Sans MS",ui-rounded,sans-serif}
+h1{font-size:calc(clamp(34px,6vw,58px)*var(--k,1))}
+.hero p{font-size:calc(22px*var(--k,1))}.card h3{font-size:calc(23px*var(--k,1))}.side .lead{font-size:calc(30px*var(--k,1))}.time{font-size:calc(34px*var(--k,1))}.quote{font-size:calc(26px*var(--k,1))}
+.sec{margin:16px 0}.sec h4{margin:0 0 6px;font-size:1.1em;color:var(--acc)}
+.sw{display:flex;gap:8px;align-items:center;padding:3px 0}.sw input{width:20px;height:20px;accent-color:var(--acc)}.sw input[type=range]{width:min(320px,60%)}
+.swatch{width:34px;height:34px;border-radius:50%;border:3px solid #fff;box-shadow:0 0 0 2px var(--line);padding:0}.swatch.on{box-shadow:0 0 0 4px var(--acc)}
+.pre{background:var(--chip);border:2px dashed var(--line);border-radius:12px;padding:8px 12px;margin:6px 0}
+.io{width:100%;min-height:110px;font:14px/1.3 ui-monospace,monospace;margin-top:8px}
+.btn.danger{background:#e0618f}
+:root[data-hc="1"]{--ink:#1d1033;--soft:#43326b;--line:#6b5a93;--card:#fff;--chip:#fff}
+:root[data-theme="dark"][data-hc="1"]{--ink:#fff;--soft:#e2d6ff;--line:#b3a5ee;--card:#1e1640;--chip:#2a2050}
+:root[data-hc="1"] .card{border-width:3px}
+:root[data-roomy="1"] body{letter-spacing:.04em;word-spacing:.12em;line-height:1.7}
+:root[data-big="1"] button,:root[data-big="1"] input,:root[data-big="1"] select{min-height:46px}
+:root[data-big="1"] input[type=checkbox]{min-width:24px}
+:root[data-decor="0"] .decor,:root[data-decor="0"] .hd{display:none}
+:root[data-motion="off"] *{animation:none!important;transition:none!important}
+:root[data-motion="calm"] :is(.tw,.cl,.bulb,.zz,.sway,.brt,.mn,.hb,.hc){animation:none!important}
+.pl{list-style:none;margin:8px 0;padding:0;font-size:.85em}.pl button{border:0;background:none;width:100%;text-align:left;padding:2px 6px;border-radius:8px}.pl button.on{background:var(--pink);font-weight:700}
 </style></head>
 <body><div id="root"></div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.3.1/umd/react.production.min.js"></script>
@@ -137,7 +156,7 @@ const fmt=d=>new Date(d+"T12:00:00").toLocaleDateString("en-US",{month:"short",d
 const mmss=s=>Math.floor(s/60)+":"+String(s%60).padStart(2,"0");
 
 /* ---------- data ---------- */
-const PAGES=[["home","🏠","Home"],["about","💜","About Me"],["notes","📓","My Notes"],["games","🎮","Games"],["gallery","🖼️","Gallery"],["contact","✉️","Contact"]];
+const PAGES=[["home","🏠","Home"],["about","💜","About Me"],["notes","📓","My Notes"],["games","🎮","Games"],["gallery","🖼️","Gallery"],["settings","","Settings"]];
 const TAGS=["Minecraft","Cities: Skylines","Music","My Life","Dreams"], TAGI=["🟩","🏙️","🎵","⭐","☁️"];
 const seedNotes=[{id:1,t:"You can do it! ♡",c:"pink",tag:"My Life",d:"2026-10-21"},{id:2,t:"Small steps, big dreams",c:"blue",tag:"Dreams",d:"2026-10-20"},{id:3,t:"Remember: you are enough",c:"yellow",tag:"My Life",d:"2026-10-19"}];
 const seedTodos=[{id:1,t:"Finish my website",x:1},{id:2,t:"Play Minecraft",x:1},{id:3,t:"Learn how to build better"},{id:4,t:"Watch a tutorial"},{id:5,t:"Explore Cities: Skylines"},{id:6,t:"Be happy!"}];
@@ -147,16 +166,25 @@ const TRACKS=[{n:"lofi hip hop radio",s:"beats to relax/study to",ch:[[57,60,64]
 
 /* ---------- Web Audio lofi player ---------- */
 function usePlayer(){
-  const[i,setI]=useState(0),[on,setOn]=useState(false),[p,setP]=useState(0),a=useRef(null);
+  const[i,setI]=useState(0),[on,setOn]=useState(false),[p,setP]=useState(0),[dur,setDur]=useState(180),[fb,setFb]=useState(false),a=useRef(null),au=useRef(null);
   useEffect(()=>{
-    if(!on)return;
+    if(!on||!fb)return;
     try{a.current=a.current||new(window.AudioContext||window.webkitAudioContext)();a.current.resume()}catch(e){return}
     const ctx=a.current;let step=0;
     const chord=()=>TRACKS[i].ch[step++%4].forEach(m=>{const o=ctx.createOscillator(),g=ctx.createGain(),t=ctx.currentTime;o.type="triangle";o.frequency.value=440*Math.pow(2,(m-69)/12);g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(.05,t+.6);g.gain.linearRampToValueAtTime(0,t+3.4);o.connect(g);g.connect(ctx.destination);o.start(t);o.stop(t+3.5)});
     chord();const c=setInterval(chord,3000),q=setInterval(()=>setP(x=>(x+1)%180),1000);
     return()=>{clearInterval(c);clearInterval(q)}
-  },[on,i]);
-  return{i,on,p,toggle:()=>setOn(!on),next:()=>{setI((i+1)%3);setP(0)},prev:()=>{setI((i+2)%3);setP(0)}};
+  },[on,i,fb]);
+  useEffect(()=>{if(fb)return;const x=new Audio();x.preload="none";au.current=x;let bad=0;
+    x.ontimeupdate=()=>setP(Math.floor(x.currentTime));
+    x.onloadedmetadata=()=>setDur(isFinite(x.duration)?Math.floor(x.duration):180);
+    x.onplaying=()=>{bad=0};
+    x.onended=()=>setI(v=>(v+1)%SONGS.length);
+    x.onerror=()=>{if(++bad<SONGS.length)setI(v=>(v+1)%SONGS.length);else{setFb(true);setI(0);setP(0);setDur(180)}};
+    return()=>{x.onerror=null;x.pause();x.removeAttribute("src")}},[fb]);
+  useEffect(()=>{const x=au.current;if(fb||!x)return;x.src=AUDIO_BASE+encodeURIComponent(SONGS[i]);setP(0);if(on)x.play().catch(()=>{})},[i,fb]);
+  useEffect(()=>{const x=au.current;if(fb||!x)return;if(on)x.play().catch(()=>{});else x.pause()},[on,fb]);
+  return{i,on,p,dur,fb,pick:k=>{setI(k);setOn(true)},toggle:()=>setOn(!on),next:()=>{const L=fb?3:SONGS.length;setI((i+1)%L);setP(0)},prev:()=>{const L=fb?3:SONGS.length;setI((i+L-1)%L);setP(0)}};
 }
 
 /* ---------- SVG illustrations ---------- */
@@ -223,8 +251,9 @@ const V={verticalAlign:"middle"};
 const RE=/(\ud83d\udc9c|\u2764\ufe0f?|\u2661|\u2b50|\u2728|\ud83c\udf19|\u2601\ufe0f?|\ud83d\udc31|\ud83d\udc30|\ud83c\udf38|\ud83c\udf53|\ud83e\uddf8|\u2600\ufe0f?)/;
 const EMO={"\ud83d\udc9c":h(Heart,{s:20,f:"#b58cf0"}),"\u2764":h(Heart,{s:20}),"\u2661":h(Heart,{s:20,f:"#ffb3d1"}),"\u2b50":h(Star,{s:20}),"\u2728":h(Sparkle,{s:20}),"\ud83c\udf19":h(Moon,{s:20}),"\u2601":h(Cloud,{s:26}),"\ud83d\udc31":h(Cat,{s:30}),"\ud83d\udc30":h(Bunny,{s:22}),"\ud83c\udf38":h(Flower,{s:20}),"\ud83c\udf53":h(Berry,{s:20}),"\ud83e\uddf8":h(Teddy,{s:20}),"\u2600":h(Sun,{s:20})};
 const Txt=({t})=>String(t).split(RE).map((x,i)=>i%2?h("span",{key:i,className:"ic",style:{margin:"0 2px"}},EMO[x.replace("\ufe0f","")]):x);
+const Gear=({s=40,...p})=>Svg(s,s,"0 0 48 48",p,[0,45,90,135].map(a=>h("rect",{key:a,x:20,y:3,width:8,height:42,rx:3,fill:"#b9a8f5",transform:"rotate("+a+" 24 24)"})),h("circle",{cx:24,cy:24,r:14,fill:"#b9a8f5"}),h("circle",{cx:24,cy:24,r:7,fill:"#fff",...st}));
 const T=(I,t)=>h("span",null,h(I,{s:24,style:{verticalAlign:"middle",marginRight:6}}),t);
-const NAVI={home:h(HomeI,{s:20}),about:h(Heart,{s:20}),notes:h(Notebook,{s:20}),games:h(Pad,{s:22}),gallery:h(Picture,{s:20}),contact:h(Mail,{s:20})};
+const NAVI={home:h(HomeI,{s:20}),about:h(Heart,{s:20}),notes:h(Notebook,{s:20}),games:h(Pad,{s:22}),gallery:h(Picture,{s:20}),settings:h(Gear,{s:20})};
 const MEM={cat:h(Cat,{s:50}),bunny:h(Bunny,{s:44}),star:h(Star,{s:46}),moon:h(Moon,{s:46}),cloud:h(Cloud,{s:56}),berry:h(Berry,{s:46}),teddy:h(Teddy,{s:46}),flower:h(Flower,{s:46})};
 const ICO={Minecraft:h(Block,{s:22}),"Cities: Skylines":h(City,{s:22}),Music:h(Phones,{s:22}),"My Life":h(Flower,{s:22}),Dreams:h(Moon,{s:22})};
 
@@ -246,11 +275,13 @@ function Todos(){
       h("button",{className:"x","aria-label":"Delete task",onClick:()=>setTodos(todos.filter(y=>y.id!=x.id))},"×"))));
 }
 function Player(){
-  const{player:p}=useCtx(),T=TRACKS[p.i];
+  const{player:p}=useCtx(),T=p.fb?TRACKS[p.i]:{n:nice(SONGS[p.i]),s:"track "+(p.i+1)+" of "+SONGS.length};
   return h(Card,{title:h("span",null,"Now Playing ",h(Tune,{s:20,style:V}))},
     h("div",{className:"row"},h("div",{className:"cover"},h(Cover,{s:50})),h("div",null,h("b",null,T.n),h("div",{className:"soft"},"– "+T.s))),
-    h("div",{className:"bar"},h("i",{style:{width:p.p/1.8+"%"}})),
-    h("div",{className:"soft"},mmss(p.p)+" / 3:00"),
+    h("div",{className:"bar"},h("i",{style:{width:Math.min(100,p.p/p.dur*100)+"%"}})),
+    h("div",{className:"soft"},mmss(p.p)+" / "+mmss(p.dur)),
+    p.fb&&h("div",{className:"soft"},"Couldn’t load your songs here, so this is the built-in lofi."),
+    !p.fb&&h("ol",{className:"pl"},SONGS.map((f,k)=>h("li",{key:f},h("button",{className:k==p.i?"on":"",onClick:()=>p.pick(k)},nice(f))))),
     h("div",{className:"ctl"},h("button",{onClick:p.prev,"aria-label":"Previous track"},h(Prev,{s:22})),h("button",{className:"big",onClick:p.toggle,"aria-label":p.on?"Pause":"Play"},h(p.on?Pause:Play,{s:22})),h("button",{onClick:p.next,"aria-label":"Next track"},h(Next,{s:22}))));
 }
 function ClockCard(){
@@ -325,7 +356,7 @@ function Contact(){
       h("textarea",{placeholder:"Say hi…",value:f.m,onChange:u("m"),"aria-label":"Message"}),
       err&&h("p",{className:"err",role:"alert"},err),h("button",{className:"btn"},"Send ",h(Heart,{s:16,f:"#fff",style:V}))));
 }
-const VIEWS={home:Home,about:About,notes:Notes,games:Games,gallery:Gallery,contact:Contact};
+const VIEWS={home:Home,about:About,notes:Notes,games:Games,gallery:Gallery,settings:Settings};
 
 const Plant=({s=90,...p})=>Svg(s,s*1.375,"0 0 80 110",p,[[-50,18],[-25,24],[0,27],[25,24],[50,18]].map((l,i)=>h("ellipse",{key:i,cx:40,cy:42,rx:7,ry:l[1],fill:["#8fdc6a","#6cc04a","#7fd45f"][i%3],transform:"rotate("+l[0]+" 40 62)"})),h("path",{d:"M20 62 H60 L55 100 H25Z",fill:"#ffc9dc",stroke:L,strokeWidth:2,strokeLinejoin:"round"}),h("path",{d:"M24 72 H56",stroke:"#fff",strokeWidth:3,opacity:.6}),h("rect",{x:2,y:100,width:76,height:7,rx:3.5,fill:"#d7b894"}));
 const Sleeper=({s=130,...p})=>Svg(s,s*.7,"0 0 120 84",p,h("ellipse",{cx:60,cy:68,rx:56,ry:14,fill:"#cbbdf5"}),h("ellipse",{cx:68,cy:50,rx:36,ry:22,fill:"#fff",...st}),h("ellipse",{cx:30,cy:32,rx:15,ry:6,fill:"#fff",transform:"rotate(-25 30 32)",...st}),h("ellipse",{cx:30,cy:32,rx:10,ry:3,fill:"#ffc8dc",transform:"rotate(-25 30 32)"}),h("circle",{cx:38,cy:50,r:16,fill:"#fff",...st}),h("path",{d:"M29 50 Q33 54 37 50 M40 50 Q44 54 48 50",stroke:K,strokeWidth:2,fill:"none",strokeLinecap:"round"}),h("ellipse",{cx:30,cy:58,rx:4,ry:2.6,fill:"#ffb3cf"}));
@@ -341,20 +372,67 @@ function Decor(){return h("div",{className:"decor","aria-hidden":"true"},
   h("div",{className:"corner pl"},h(Plant,{s:96,className:"sway"})),
   h("div",{className:"corner pr"},h(Plant,{s:84,className:"sway"})));}
 const HS='<svg width="22" height="22" viewBox="0 0 48 48"><path d="M24 42C6 30 6 12 17 11 21 11 24 14 24 17 24 14 27 11 31 11 42 12 42 30 24 42Z" fill="#ff9ec7"/></svg>';
-function pop(e){if(matchMedia("(prefers-reduced-motion: reduce)").matches)return;const r=e.currentTarget.getBoundingClientRect();for(let i=0;i<5;i++){const d=document.createElement("span");d.className="fh";d.innerHTML=HS;d.style.cssText="left:"+(r.left+(i-2)*12)+"px;top:"+r.top+"px;animation-delay:"+i*.07+"s";document.body.appendChild(d);setTimeout(()=>d.remove(),1500)}}
+function pop(e){if(matchMedia("(prefers-reduced-motion: reduce)").matches||document.documentElement.dataset.motion=="off")return;const r=e.currentTarget.getBoundingClientRect();for(let i=0;i<5;i++){const d=document.createElement("span");d.className="fh";d.innerHTML=HS;d.style.cssText="left:"+(r.left+(i-2)*12)+"px;top:"+r.top+"px;animation-delay:"+i*.07+"s";document.body.appendChild(d);setTimeout(()=>d.remove(),1500)}}
+/* Put your mp3 file names here (the files live in the audio folder next to this page) */
+const AUDIO_BASE="audio/";
+const SONGS=["song-1.mp3","song-2.mp3","song-3.mp3","song-4.mp3"];
+const nice=f=>f.replace(/\.mp3$/i,"").replace(/[-_]+/g," ");
+const FONTS=["Gaegu","Patrick Hand","Quicksand","Atkinson Hyperlegible"];
+const PN=[["lavender","Lavender","#a85fd1"],["peach","Peach","#e0764a"],["mint","Mint","#2fa37a"],["sky","Sky","#3f8fe0"]];
+const PAL={peach:[["#e0764a","#ffd6c9","#ffe8cf","#fff3b8","linear-gradient(180deg,#ffd8c4 0%,#ffc9d8 55%,#ffeccd 100%)"],["#ffb08a","#5a3030","#4f3a2c","#5c5130","linear-gradient(180deg,#2a1710 0%,#3a2030 60%,#4a2a2a 100%)"]],mint:[["#2fa37a","#d3f5e6","#d3ecff","#f3f7c4","linear-gradient(180deg,#c8f0e0 0%,#d6e8ff 55%,#f0ffe8 100%)"],["#7be0b5","#1f4a3c","#26405a","#454a24","linear-gradient(180deg,#0f2a24 0%,#173a3a 60%,#1c3a4a 100%)"]],sky:[["#3f8fe0","#d6e8ff","#e0f0ff","#fff0c8","linear-gradient(180deg,#bcdcff 0%,#d8d0ff 55%,#fde8f5 100%)"],["#8cc4ff","#26385f","#2c4670","#5c5130","linear-gradient(180deg,#0e1a38 0%,#1a2650 60%,#2a2458 100%)"]]};
+const DEF={palette:"lavender",font:"Gaegu",size:100,hc:false,roomy:false,big:false,motion:"cozy",decor:true};
+const cleanCfg=s=>({palette:PN.some(p=>p[0]==s.palette)?s.palette:DEF.palette,font:FONTS.includes(s.font)?s.font:DEF.font,size:Math.min(150,Math.max(80,+s.size||100)),hc:!!s.hc,roomy:!!s.roomy,big:!!s.big,decor:s.decor!==false,motion:["cozy","calm","off"].includes(s.motion)?s.motion:"cozy"});
+const KEYS=()=>{try{return Object.keys(localStorage).filter(k=>k.startsWith("chika:"))}catch(e){return[]}};
+const Sec=({t,children})=>h("div",{className:"sec"},h("h4",null,t),children);
+const Chips=({opts,val,set})=>h("div",{className:"chips"},opts.map(o=>h("button",{key:o[0],className:"chip"+(val==o[0]?" on":""),"aria-pressed":val==o[0],onClick:()=>set(o[0]),style:o[2]},o[1])));
+const Sw=({label,hint,on,set})=>h("label",{className:"sw"},h("input",{type:"checkbox",checked:on,onChange:e=>set(e.target.checked)}),h("span",null,label,hint&&h("small",{className:"soft"}," – "+hint)));
+function Sure({label,run}){const[a,setA]=useState(false);useEffect(()=>{if(!a)return;const t=setTimeout(()=>setA(false),3000);return()=>clearTimeout(t)},[a]);return h("button",{className:"btn danger",onClick:()=>{if(a){setA(false);run()}else setA(true)}},a?"Tap again to confirm":label)}
+function Settings(){
+  const{cfg,setCfg,theme,setTheme,notes,setNotes,todos,setTodos}=useCtx(),[io,setIo]=useState(""),[msg,setMsg]=useState("");
+  const set=k=>v=>setCfg({...cfg,[k]:v});
+  const size=()=>KEYS().reduce((a,k)=>a+(localStorage.getItem(k)||"").length,0);
+  const show=()=>{const o={};KEYS().forEach(k=>o[k.slice(6)]=ls.get(k.slice(6),null));const j=JSON.stringify(o,null,1);setIo(j);try{navigator.clipboard.writeText(j).then(()=>setMsg("Copied to your clipboard!"),()=>setMsg("Select the text below to copy it."))}catch(e){setMsg("Select the text below to copy it.")}};
+  const imp=()=>{try{const o=JSON.parse(io);if(!o||typeof o!="object"||Array.isArray(o))throw 0;
+    if(Array.isArray(o.notes))setNotes(o.notes.filter(n=>n&&typeof n.t=="string").slice(0,200).map(n=>({id:+n.id||Math.random(),t:n.t.slice(0,140),c:["pink","blue","yellow"].includes(n.c)?n.c:"pink",tag:TAGS.includes(n.tag)?n.tag:"My Life",d:/^\d{4}-\d\d-\d\d$/.test(n.d)?n.d:today()})));
+    if(Array.isArray(o.todos))setTodos(o.todos.filter(t=>t&&typeof t.t=="string").slice(0,200).map(t=>({id:+t.id||Math.random(),t:t.t.slice(0,140),x:t.x?1:0})));
+    if(["light","dark","auto"].includes(o.theme))setTheme(o.theme);
+    if(o.settings&&typeof o.settings=="object")setCfg(cleanCfg(o.settings));
+    if(+o.best>0)ls.set("best",Math.floor(+o.best));
+    setMsg("Imported!")}catch(e){setMsg("That doesn’t look like exported data.")}};
+  const wipe=()=>{try{KEYS().forEach(k=>localStorage.removeItem(k))}catch(e){}setNotes(seedNotes);setTodos(seedTodos);setCfg(DEF);setTheme("auto");setIo("");setMsg("Everything is back to how it started.")};
+  return h(Card,{title:T(Gear,"Settings")},
+    h("p",{className:"soft"},"Everything here is saved only in this browser."),
+    h(Sec,{t:"Look"},h(Chips,{opts:[["light","Light"],["dark","Dark"],["auto","Auto"]],val:theme,set:setTheme}),
+      h("div",{className:"chips"},PN.map(p=>h("button",{key:p[0],className:"swatch"+(cfg.palette==p[0]?" on":""),style:{background:p[2]},title:p[1],"aria-label":p[1]+" palette","aria-pressed":cfg.palette==p[0],onClick:()=>set("palette")(p[0])})))),
+    h(Sec,{t:"Text"},h(Chips,{opts:FONTS.map(f=>[f,f,{fontFamily:'"'+f+'"'}]),val:cfg.font,set:set("font")}),
+      h("label",{className:"sw"},"Size",h("input",{type:"range",min:80,max:150,step:5,value:cfg.size,onChange:e=>set("size")(+e.target.value),"aria-label":"Text size"}),cfg.size+"%"),
+      h("p",{className:"pre"},"The quick bunny hops over the cozy cloud.")),
+    h(Sec,{t:"Accessibility"},h(Sw,{label:"High contrast",on:cfg.hc,set:set("hc")}),h(Sw,{label:"Roomy text spacing",on:cfg.roomy,set:set("roomy")}),h(Sw,{label:"Bigger buttons and fields",on:cfg.big,set:set("big")})),
+    h(Sec,{t:"Animations"},h(Chips,{opts:[["cozy","Cozy"],["calm","Calm"],["off","Off"]],val:cfg.motion,set:set("motion")}),
+      h("p",{className:"soft"},"Cozy follows your device’s reduce-motion setting. Calm turns off the looping decorations. Off stops everything."),
+      h(Sw,{label:"Show decorations",hint:"stars, clouds, lights and sleepy friends",on:cfg.decor,set:set("decor")})),
+    h(Sec,{t:"Your data"},h("p",{className:"soft"},notes.length+" notes · "+todos.length+" to-dos · about "+(size()/1024).toFixed(1)+" KB stored on this device"),
+      h("div",{className:"chips"},h("button",{className:"btn",onClick:show},"Show / copy my data"),h("button",{className:"btn",onClick:imp},"Import from box")),
+      h("textarea",{className:"io",value:io,onChange:e=>setIo(e.target.value),placeholder:"Your data appears here. Paste exported data here to import it.","aria-label":"Data export and import"}),
+      msg&&h("p",{role:"status"},msg),
+      h("div",{className:"chips"},h(Sure,{label:"Delete all notes",run:()=>{setNotes([]);setMsg("Notes deleted.")}}),h(Sure,{label:"Delete all to-dos",run:()=>{setTodos([]);setMsg("To-dos deleted.")}}),h(Sure,{label:"Reset settings",run:()=>{setCfg(DEF);setTheme("auto");setMsg("Settings reset.")}}),h(Sure,{label:"Erase all & start fresh",run:wipe}))));
+}
 /* ---------- app shell ---------- */
 function App(){
-  const[theme,setTheme]=usePersist("theme",matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");
-  useEffect(()=>{document.documentElement.dataset.theme=theme},[theme]);
+  const[theme,setTheme]=usePersist("theme","auto");
+  const[sysDark,setSys]=useState(()=>matchMedia("(prefers-color-scheme: dark)").matches);
+  useEffect(()=>{const m=matchMedia("(prefers-color-scheme: dark)"),f=e=>setSys(e.matches);m.addEventListener("change",f);return()=>m.removeEventListener("change",f)},[]);
+  const[cfg,setCfg]=usePersist("settings",DEF),dark=theme=="dark"||(theme=="auto"&&sysDark);
+  useEffect(()=>{const d=document.documentElement,s=d.style,P=PAL[cfg.palette],m=dark?1:0;d.dataset.theme=dark?"dark":"light";["--acc","--pink","--blue","--yellow","--bg"].forEach((k,i)=>P?s.setProperty(k,P[m][i]):s.removeProperty(k));s.setProperty("--ff",'"'+cfg.font+'"');s.setProperty("--k",cfg.size/100);["hc","roomy","big","decor"].forEach(k=>d.dataset[k]=cfg[k]?"1":"0");d.dataset.motion=cfg.motion},[cfg,dark]);
   const[route,setR]=useState(()=>{const x=location.hash.slice(1);return VIEWS[x]?x:"home"});
   const go=r=>{setR(r);try{history.replaceState(null,"","#"+r)}catch(e){}scrollTo(0,0)};
   const[notes,setNotes]=usePersist("notes",seedNotes),[todos,setTodos]=usePersist("todos",seedTodos),[tag,setTag]=useState("All"),player=usePlayer();
   const View=VIEWS[route];
-  return h(Ctx.Provider,{value:{notes,setNotes,todos,setTodos,tag,setTag,go,player}},
+  return h(Ctx.Provider,{value:{notes,setNotes,todos,setTodos,tag,setTag,go,player,cfg,setCfg,theme,setTheme}},
     h(Decor),h("div",{className:"wrap"},
       h("header",{className:"hero"},h("div",{className:"hd","aria-hidden":"true"},h(Moon,{s:50,className:"mn"}),h(Cat,{s:120,className:"hc"}),h(Bunny,{s:44,className:"hb"}),h("span",{className:"bub"},"Thanks for visiting! ",h(Heart,{s:14,f:"#b58cf0",style:V})),h("span",{className:"zz"},"z")),h("h1",null,"Chika’s Cozy Corner ",h(Paw,{s:34,style:V})),h("p",null,"small dreams ",h(Sparkle,{s:16,style:V})," big adventures")),
       h("nav",{"aria-label":"Main"},PAGES.map(p=>h("button",{key:p[0],className:"navb"+(route==p[0]?" on":""),"aria-current":route==p[0]?"page":null,onClick:()=>go(p[0])},h("span",{className:"ic"},NAVI[p[0]]),p[2])),
-        h("button",{className:"navb","aria-label":"Toggle light or dark mode",onClick:()=>setTheme(theme=="dark"?"light":"dark")},h(theme=="dark"?Sun:Moon,{s:20}))),
+        h("button",{className:"navb","aria-label":"Toggle light or dark mode",onClick:()=>setTheme(dark?"light":"dark")},h(dark?Sun:Moon,{s:20}))),
       h("main",null,h(View)),
       h("footer",null,h(Txt,{t:"Made with lots of love 💜 "}),h(Paw,{s:18,style:{verticalAlign:"middle"}}))));
 }
